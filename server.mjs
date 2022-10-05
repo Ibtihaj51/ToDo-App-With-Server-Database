@@ -24,11 +24,11 @@ app.post('/todo', (req, res) => {
             console.log(saved);
 
             res.send({
-                message: "your todo is saved"
+                message: "Your Todo is Saved"
             })
         } else {
             res.status(500).send({
-                message: "server error"
+                message: "Server error"
             })
         }
     })
@@ -38,12 +38,12 @@ app.get('/todos', (req, res) => {
     todoModel.find({}, (err, data) => {
         if (!err) {
             res.send({
-                message: "here is you todo list",
+                message: "Here is your Todo List",
                 data: data
             })
         }else{
             res.status(500).send({
-                message: "server error"
+                message: "Server error"
             })
         }
     });
