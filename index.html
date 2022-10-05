@@ -24,9 +24,9 @@
         function postTodo() {
             let todoText = document.querySelector("#todo").value
 
-            axios.post(`http://localhost:3000/todo`, {
+            axios.post(`http://localhost:3000/todo`), {
                 text: todoText
-            })
+            }
                 .then(function (response) {
                     console.log(response.data);
 
