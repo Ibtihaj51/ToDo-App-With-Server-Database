@@ -24,7 +24,7 @@ app.post('/todo', (req, res) => {
             console.log(saved);
 
             res.send({
-                message: "Your Todo is Saved"
+                // message: "Your Todo is Saved"
             })
         } else {
             res.status(500).send({
@@ -52,7 +52,12 @@ app.get('/todos', (req, res) => {
 
 app.delete('/del', (req, res) => {
     
-    todoModel.deleteMany({}, (err, data) => {
+    todoModel.deleteMany({}, (err, data,saved) => {
+        
+        console.log("eror",err)
+        console.log("res",red)
+        console.log("data",data)
+        console.log(saved);
         if (!err) {
             res.send({
                 message: "Your Todo is Deleted",

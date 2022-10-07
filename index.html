@@ -105,8 +105,8 @@ h1 {
         function getDelete() {
        
                   
-       let code = prompt("Enter Password")
-       if (code === "123456789") {
+    //    let code = prompt("Enter Password")
+    //    if (code === "123456789") {
            axios.delete('https://muddy-slippers-hen.cyclic.app/del')
        .then(function (response) {
                console.log(response.data);
@@ -114,7 +114,7 @@ h1 {
            })    
            .catch((error) => {
            console.log(error)
-       })}
+       })
    }
 
     </script>
