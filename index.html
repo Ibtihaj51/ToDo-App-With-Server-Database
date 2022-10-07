@@ -8,17 +8,55 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+<style>
+    body{
+        background-color:#00A2E2}
+       
+       
+
+h1 {
+  color: #000000;
+}
+
+.add{
+    color:  #000000;
+    font-size: 20px;
+}
+
+.refresh{
+    color:  #000000;
+    font-size: 20px;
+
+}
+.td{
+
+    font-size: 20px;
+}
+.del{
+    color:  #000000;
+    font-size: 20px;
+
+
+}
+</style>
 
 <body>
-    <b><center><h1>ToDo App With Server And Database</h1>
+    <b><center><h1 style="font-family: Geneva, Verdana, sans-serif;"> ToDo App With Server And Database</h1>
 
     <form onsubmit="postTodo(); return false">
-        Todo: <input id="todo" type="text" required>
-        <button type="submit">Add</button>
+        <h1  style="font-family: Geneva, Verdana, sans-serif;">
+            
+            Todo: <input class="td" id="todo" type="text" required>
+        <button class="add" type="submit">Add</button>
+       
+        
     </form>
-    <button onclick="getAllTodos()">Refresh</button>
+    <button onclick="getDelete()" class="del" type="delall">Delete</button>
+    <br>
+    <button class="refresh" onclick="getAllTodos()">Refresh</button></h1>
+   
 
-    <h3 id="result"> </h3></center></b>
+    <h1 style="font-family: Geneva, Verdana, sans-serif;" id="result"></h1></center></b>
 
     <script>
         function postTodo() {
@@ -63,6 +101,21 @@
         }
 
         setInterval(getAllTodos, 1000);
+
+        function getDelete() {
+       
+                  
+       let code = prompt("Enter Password")
+       if (code === "000") {
+           axios.delete('https://muddy-slippers-hen.cyclic.app/del')
+       .then(function (response) {
+               console.log(response.data);
+       
+           })    
+           .catch((error) => {
+           console.log(error)
+       })}
+   }
 
     </script>
 
