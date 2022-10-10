@@ -50,7 +50,7 @@ app.get('/todos', (req, res) => {
 })
 
 
-app.delete('/del', (req, res) => {
+app.delete('/todos', (req, res) => {
     
     todoModel.deleteMany({}, (err, data,saved) => {
         
