@@ -62,7 +62,7 @@ h1 {
         function postTodo() {
             let todoText = document.querySelector("#todo").value
 
-            axios.post(`https://muddy-slippers-hen.cyclic.app/todo`, {
+            axios.post(`https://tame-ruby-boa-wear.cyclic.app/todo`, {
                 text: todoText
             })
                 .then(function (response) {
@@ -83,7 +83,7 @@ h1 {
         }
 
         function getAllTodos() {
-            axios.get(`https://muddy-slippers-hen.cyclic.app/todos`)
+            axios.get(`https://tame-ruby-boa-wear.cyclic.app/todos`)
                 .then(function (response) {
                     console.log(response.data);
 
@@ -105,9 +105,9 @@ h1 {
         function getDelete() {
        
                   
-    //    let code = prompt("Enter Password")
-    //    if (code === "123456789") {
-           axios.delete('https://muddy-slippers-hen.cyclic.app/del')
+       let code = prompt("Enter Password")
+       if (code === "123") {
+           axios.delete('https://tame-ruby-boa-wear.cyclic.app/del')
        .then(function (response) {
                console.log(response.data);
        
@@ -115,7 +115,7 @@ h1 {
            .catch((error) => {
            console.log(error)
        })
-   }
+   }}
 
     </script>
 
