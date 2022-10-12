@@ -70,7 +70,7 @@ app.listen(port, () => {
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-let dbURI = 'mongodb+srv://ibtihaj_ali:hahaflat202@todo.hj5dqzx.mongodb.net/?retryWrites=true&w=majority';
+let dbURI = 'mongodb+srv://ibtihaj_ali:hahaflat202@todo.hj5dqzx.mongodb.net/abc?retryWrites=true&w=majority';
 mongoose.connect(dbURI);
 
 
